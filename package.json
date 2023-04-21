@@ -1,0 +1,30 @@
+{
+  "name": "simple-blog",
+  "version": "1.0.0",
+  "description": "A project to create a simple blog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "watch": "nodemon -e js,html,css -w src src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KSWorm93/simple-blog.git"
+  },
+  "keywords": [
+    "blog", "node.js", "express.js"
+  ],
+  "author": "Kasper Worm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KSWorm93/simple-blog/issues"
+  },
+  "homepage": "https://github.com/KSWorm93/simple-blog#README",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

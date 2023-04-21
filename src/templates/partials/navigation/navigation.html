@@ -1,0 +1,12 @@
+<div class="navigation">
+    <link rel="stylesheet" type="text/css" href="/css/navigation.css" />
+
+    <a {{#ifEquals navigation.active "blog"}} class="active" {{/ifEquals}} href="/blog">Blog</a>
+    <a {{#ifEquals navigation.active "post"}} class="active" {{/ifEquals}} href="/post">Post</a>
+    
+    {{#ifEqualsEither navigation.active "admin,login,create"}}
+        <a {{#ifEquals navigation.active "admin"}} class="active" {{/ifEquals}} href="/admin">Admin</a>
+        <a {{#ifEquals navigation.active "create"}} class="active" {{/ifEquals}} href="/create">Create</a>
+        <a {{#ifEquals navigation.active "login"}} class="active" {{/ifEquals}} href="/login">Login</a>
+    {{/ifEqualsEither}}
+  </div>
