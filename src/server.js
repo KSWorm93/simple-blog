@@ -1,10 +1,12 @@
+'use strict';
+
 //Imports
 const dirs = require('./utilities/directories');
 const express = require('express');
 const hbs = require('hbs');
 
 //Constants
-const app = express();
+const server = express();
 //Server
 const PORT = 8106;
 const HOSTNAME = 'http://localhost:';
@@ -23,15 +25,15 @@ hbs.registerHelper('ifEqualsEither', function(arg1, arg2, options) {
 });
 
 //Set engine and views location
-app.set('views', dirs.templates);
-app.use(express.static(dirs.client))
-app.set('view engine', 'html');
-app.engine('html', hbs.__express);
+server.set('views', dirs.templates);
+server.use(express.static(dirs.client))
+server.set('view engine', 'html');
+server.engine('html', hbs.__express);
 
 //Add routes
-require("./routes/router.js")(app);
+require("./routes/router.js")(server);
 
 //start the server
-app.listen(PORT);
+server.listen(PORT);
 
 console.log("Server running at: " + HOSTNAME + PORT);

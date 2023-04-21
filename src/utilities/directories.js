@@ -1,3 +1,5 @@
+'use strict';
+
 const rootProject = '/../..';
 
 module.exports = {
@@ -8,4 +10,4 @@ module.exports = {
     client:  __dirname + rootProject + '/src/client',
     css:  __dirname + rootProject + '/src/client/css',
     js:  __dirname + rootProject + '/src/client/js',
-}
+};
