@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    margin-left: auto;
+}
+
+h2 {
+    color: navy;
+    margin-left: 20px;
+}
+
+h3 {
+    color: lightcoral;
+    margin-left: 20px;
+}
+
+.section {
+    margin-top: 5%;
+}
+
+.section > img {
+    max-width: 20%;
+    max-height: 20%;        
+}
+
+.section > img.medium {
+    max-width: 30%;
+    max-height: 30%; 
+}
+
+.section > img.large {
+    max-width: 40%;
+    max-height: 40%; 
+}

@@ -2,12 +2,17 @@
 
 const rootProject = '/../..';
 
-module.exports = {
-    source: __dirname + rootProject + '/src',
-    templates:  __dirname + rootProject + '/src/templates',
-    layouts:  __dirname + rootProject + '/src/templates/layouts',
-    partials:  __dirname + rootProject + '/src/templates/partials',
-    client:  __dirname + rootProject + '/src/client',
-    css:  __dirname + rootProject + '/src/client/css',
-    js:  __dirname + rootProject + '/src/client/js',
+const directories = new function () {
+    this.source = __dirname + rootProject + '/src';
+    this.routes = this.source + '/routes';
+    this.utilities = this.source + '/utilities';
+    this.templates = this.source + '/templates';
+    this.layouts = this.templates + '/layouts';
+    this.partials = this.templates + '/partials';
+    this.client = this.source + '/client';
+    this.css = this.client + '/css';
+    this.js = this.client + '/js';
+    this.blogData = __dirname + rootProject + '/blogData';
 };
+
+module.exports = directories;

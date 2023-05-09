@@ -3,3 +3,6 @@
 
 # VS Code
 *.code-workspace
+
+# Blog storage
+/blogData

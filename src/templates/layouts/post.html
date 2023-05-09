@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/css/post.css" />
         <title>View blog post</title>
     </head>
 
@@ -10,5 +11,18 @@
         {{> navigation/navigation}}
         
         <p>Here you can read about this exciting topic!</p>
+
+        <h2>{{content.title}}</h2>
+        <p>{{content.intro}}</p>
+
+        <div class="sections">
+            {{#each content.sections}}
+                <div class="section">
+                    <h3>{{this.subTitle}}</h3>
+                    <img src="{{this.image}}" class="{{this.imageSize}}" alt="{{this.imageAlt}}">
+                    <p>{{this.text}}</p>
+                </div>
+            {{/each}}
+        </div>
     </body>
 </html>
