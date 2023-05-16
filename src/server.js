@@ -1,9 +1,10 @@
 'use strict';
 
 //Imports
-const dirs = require('./utilities/directories');
 const express = require('express');
 const hbs = require('hbs');
+const dirs = require('./utilities/directories');
+const db = require('./utilities/database');
 
 //Constants
 const server = express();
@@ -26,7 +27,13 @@ server.engine('html', hbs.__express);
 //Add routes
 require(dirs.routes + '/router.js')(server);
 
-//start the server
-server.listen(PORT);
-
-console.log('Server running at: ' + HOSTNAME + PORT);
+db.init().then(() => {
+    console.log('Database - Ready!');
+}).catch((error) => {
+    console.log('Database - Failed to create! Exiting.');
+    throw(error);
+}).then(() => {
+    //Start the server once database is ready
+    server.listen(PORT);
+    console.log('Server - Running at: ' + HOSTNAME + PORT);
+});
