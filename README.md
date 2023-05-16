@@ -15,13 +15,14 @@ If you want to run this project, follow these steps!
 
 Alternatively import a folder based structure, to construct an existing blog!
 
-1. Create a folder in the root project, called "blogData".
-2. Create a "database" file, which is simply a json file.
-This file should include an object with each property being an individual post.
-The property should link to the file that will be created in step 3.
-3. Create a json file for each blog post, it should include data such as title, intro, sections, author, etc.
-4. Inside the blogDaga folder, create a new folder for each blog post you have.
-5. Inside the blog post folder, add images that should be included in that post.
+1. Create a folder in the root project, called "database".
+2. Create a "database" file, which is simply a json file, inside "database".
+This file should include an object with each property being a reference to an individual post.
+The property should link to the file that will be created in step 5.
+3. Create a folder inside "database", called "blogData".
+4. Inside the "blogData" folder, create a new folder for each blog post you have.
+5. Inside the blog post folder, create a json file for each blog post, it should include data such as title, intro, sections, author, etc.
+6. Inside the blog post folder, add images that should be included in that post.
 
 ## Example blog post
 
