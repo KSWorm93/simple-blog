@@ -1,5 +1,16 @@
 'use strict';
 
+const lines = {
+    "twenty": '********************',
+    "fifteen": '***************',
+    "ten": '**********',
+    "five": '*****'
+};
+
+console.log(lines.twenty);
+console.log(lines.five + ' Preparing blog');
+console.log(lines.twenty);
+
 //Imports
 const express = require('express');
 const hbs = require('hbs');

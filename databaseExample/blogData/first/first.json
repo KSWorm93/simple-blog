@@ -1,0 +1,23 @@
+{
+	"title": "Technologies used!",
+	"intro": "This post is about the technologies used in the creation of this project!",
+	"sections": [
+		{
+			"subTitle": "Node.js",
+			"text": "This project is using Node.js behind the scenes.",
+			"image": "/post/image/first/image1.svg",
+			"imageAlt": "Node.js",
+			"imageSize": "medium"
+		},
+		{
+			"subTitle": "Express.js",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"image": "/post/image/first/image2.png",
+			"imageAlt": "Express.js",
+			"imageSize": "large"
+		}
+	],
+	"author": "Kasper Worm",
+	"updated": "09-05-2023",
+	"created": "09-05-2023"
+}

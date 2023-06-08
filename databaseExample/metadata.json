@@ -1,0 +1,11 @@
+{
+	"version": "v1.0.0",
+	"name": "simple-blog",
+	"postsCount": 1,
+	"posts": [
+		[
+			"first",
+			"second"
+		]
+	]
+}
