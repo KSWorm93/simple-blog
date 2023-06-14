@@ -14,6 +14,9 @@ const directories = new function () {
     this.js = this.client + '/js';
     this.database = __dirname + rootProject + '/database';
     this.blogData = this.database + '/blogData';
+    this.staticFiles = {
+        metadata: this.database + '/metadata.json'
+    };
 };
 
 module.exports = directories;

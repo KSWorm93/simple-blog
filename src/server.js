@@ -40,6 +40,14 @@ require(dirs.routes + '/router.js')(server);
 
 db.init().then(() => {
     console.log('Database - Ready!');
+
+//Testing start
+}).then(() => db.readMetadata()).then((data) => {
+    console.log('Database - Current metadata contains: ' + data);
+}).then(() => db.writeBlogPost()).then((result) => {
+    console.log('File created result: ' + result);
+//Testing done
+
 }).catch((error) => {
     console.log('Database - Failed to create! Exiting.');
     throw(error);
