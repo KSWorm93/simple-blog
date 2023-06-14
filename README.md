@@ -12,6 +12,7 @@ If you want to run this project, follow these steps!
 ## How to use - Work in progress, will possibly be changed
 
 1. Use the projects funtionality to create your own blog.
+Required folders and files will be generated upon initial run.
 
 Alternatively import a folder based structure, to construct an existing blog!
 
@@ -29,8 +30,6 @@ A working example, of this database structure, can be seen under the "databaseEx
 ## Example blog post
 
 This is an example of how a blog post could look, when it is stored on the server.
-
-NOTE! - The project does not currently use the above mentioned file structure, instead all the data are hardcoded in the blog.js route.
 
 ```
 {

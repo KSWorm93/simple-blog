@@ -38,21 +38,22 @@ server.engine('html', hbs.__express);
 //Add routes
 require(dirs.routes + '/router.js')(server);
 
-db.init().then(() => {
-    console.log('Database - Ready!');
+//Run final logic
+(async () => {
+    const databaseInitialized = await db.init();
+    console.log('Database - Initialized: ' + databaseInitialized);
 
-//Testing start
-}).then(() => db.readMetadata()).then((data) => {
-    console.log('Database - Current metadata contains: ' + data);
-}).then(() => db.writeBlogPost()).then((result) => {
-    console.log('File created result: ' + result);
-//Testing done
+    if (databaseInitialized) {
+        //Start the server once database is ready
+        server.listen(PORT);
+        console.log('Server - Running at: ' + HOSTNAME + PORT);
+    } else {
+        console.log('Database - Failed to initialize! Exiting.');
+        throw ('ERROR - Failed to initialize!');
+    }
 
-}).catch((error) => {
-    console.log('Database - Failed to create! Exiting.');
-    throw(error);
-}).then(() => {
-    //Start the server once database is ready
-    server.listen(PORT);
-    console.log('Server - Running at: ' + HOSTNAME + PORT);
-});
+    //Testing database function
+    // const written = await db.writeBlogPost();
+    // const written = await db.getBlogPost('4');
+
+})();

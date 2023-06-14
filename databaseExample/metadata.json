@@ -1,7 +1,7 @@
 {
 	"version": "v1.0.0",
 	"name": "simple-blog",
-	"postsCount": 1,
+	"postsCount": 2,
 	"posts": [
 		[
 			"first",
