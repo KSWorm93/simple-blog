@@ -4,11 +4,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
+        {{> header/globalStyles}}
     </head>
 
     <body>
-        {{> navigation/navigation}}
-        
-        <p>Fill in your login credentials!</p>
+        <div class="container">
+            {{> navigation/navigation}}
+            <p>Fill in your login credentials!</p>
+        </div>
     </body>
+    <footer>
+        {{> footer/globalScripts}}
+    </footer>
 </html>

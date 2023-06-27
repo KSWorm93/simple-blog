@@ -1,0 +1,3 @@
+.container > *:not(.pure-menu) {
+    padding-left: 0.5em;
+}

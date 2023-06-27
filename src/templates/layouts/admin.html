@@ -4,11 +4,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Admin page</title>
+        {{> header/globalStyles}}
     </head>
 
     <body>
-        {{> navigation/navigation}}
-        
-        <p>Welcome to the admin page!</p>
+        <div class="container">
+            {{> navigation/navigation}}
+            <p>Welcome to the admin page!</p>
+            
+        </div>
     </body>
+
+    <footer>
+        {{> footer/globalScripts}}
+    </footer>
 </html>

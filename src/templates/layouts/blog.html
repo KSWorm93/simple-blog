@@ -4,11 +4,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Blog</title>
+        {{> header/globalStyles}}
     </head>
 
     <body>
-        {{> navigation/navigation}}
-        
-        <p>Welcome to my blog!</p>
+        <div class="container">
+            {{> navigation/navigation}}
+            <p>Welcome to my blog!</p>
+        </div>
     </body>
+
+    <footer>
+        {{> footer/globalScripts}}
+    </footer>
 </html>

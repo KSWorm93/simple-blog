@@ -1,12 +1,23 @@
-<div class="navigation">
-    <link rel="stylesheet" type="text/css" href="/css/navigation.css" />
-
-    <a {{#ifEquals navigation.active "blog"}} class="active" {{/ifEquals}} href="/blog">Blog</a>
-    <a {{#ifEquals navigation.active "post"}} class="active" {{/ifEquals}} href="/post">Post</a>
+<div class="pure-menu pure-menu-horizontal navigation">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/navigation.css" /> -->
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+            <a class="pure-menu-link {{#ifEquals navigation.active "create"}}active{{/ifEquals}}" href="/blog">Blog</a>
+        </li>
+        <li class="pure-menu-item">
+            <a class="pure-menu-link {{#ifEquals navigation.active "create"}}active{{/ifEquals}}" href="/post">Post</a>
+        </li>
     
-    {{#ifEqualsEither navigation.active "admin,login,create"}}
-        <a {{#ifEquals navigation.active "admin"}} class="active" {{/ifEquals}} href="/admin">Admin</a>
-        <a {{#ifEquals navigation.active "create"}} class="active" {{/ifEquals}} href="/create">Create</a>
-        <a {{#ifEquals navigation.active "login"}} class="active" {{/ifEquals}} href="/login">Login</a>
+        {{#ifEqualsEither navigation.active "admin,login,create"}}
+        <li class="pure-menu-item">
+            <a class="pure-menu-link {{#ifEquals navigation.active "create"}}active{{/ifEquals}}" href="/admin">Admin</a>
+        </li>    
+        <li class="pure-menu-item">
+            <a class="pure-menu-link {{#ifEquals navigation.active "create"}}active{{/ifEquals}}" href="/create">Create</a>
+        </li>
+        <li class="pure-menu-item">
+            <a class="pure-menu-link {{#ifEquals navigation.active "create"}}active{{/ifEquals}}" href="/login">Login</a>
+        </li>
     {{/ifEqualsEither}}
-  </div>
+    </ul>
+</div>

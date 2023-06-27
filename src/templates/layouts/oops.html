@@ -4,11 +4,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Oops</title>
+        {{> header/globalStyles}}
     </head>
 
     <body>
-        {{> navigation/navigation}}
-        
-        <p>Oops! This page seems to be missing..</p>
+        <div class="container">
+            {{> navigation/navigation}}
+            <p>Oops! This page seems to be missing..</p>
+        </didv>
     </body>
+    <footer>
+        {{> footer/globalScripts}}
+    </footer>
 </html>

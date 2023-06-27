@@ -11,6 +11,7 @@ module.exports = function (server) {
     require("./blog")(server, configObjects);
     require("./admin")(server, configObjects);
     require("./api")(server, configObjects);
+    require("./static")(server, configObjects);
     
     //Catch all - Error page
     server.get('*', function (request, response) {

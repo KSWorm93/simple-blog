@@ -23,15 +23,15 @@ module.exports = function (server, configObjects) {
 		response.render(dirs.layouts + '/post.html', configObjects.post);
 	});
 
-	server.get('/post/image/:id/:image', function (request, response) {
-		const post = request.params.id;
-		const image = request.params.image;
+	// server.get('/post/image/:id/:image', function (request, response) {
+	// 	const post = request.params.id;
+	// 	const image = request.params.image;
 
-		const imagePath = path.resolve(dirs.blogData + '/' + post + '/' + image);
+	// 	const imagePath = path.resolve(dirs.blogData + '/' + post + '/' + image);
 
-		console.log('Getting image: ' + imagePath);
-		//Construct image path
-		response.sendFile(imagePath);
-	});
+	// 	console.log('Getting image: ' + imagePath);
+	// 	//Construct image path
+	// 	response.sendFile(imagePath);
+	// });
 
 };

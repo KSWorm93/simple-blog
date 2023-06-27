@@ -4,11 +4,21 @@
     <head>
         <meta charset="UTF-8">
         <title>Create post</title>
+        {{> header/globalStyles}}
     </head>
 
     <body>
-        {{> navigation/navigation}}
-        
-        <p>Here you can create a blog post!</p>
+        <div class="container">
+            {{> navigation/navigation}}
+            <h5>Create your new post!</h5>
+            
+            <!-- Include form -->
+            {{> create/createForm}}
+        </div>
     </body>
+
+    <footer>
+        {{> footer/globalScripts}}
+    </footer>
+    <script src="/js/create.js" defer></script>
 </html>
